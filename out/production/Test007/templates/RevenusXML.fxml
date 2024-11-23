@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="1336.0" style="-fx-background-color: #F5F5F5 ;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RevenusController">
+   <children>
+      <TableView fx:id="tvRv" layoutX="581.0" layoutY="185.0" onMouseClicked="#getSelected" prefHeight="318.0" prefWidth="716.0">
+         <columns>
+            <TableColumn fx:id="colID" prefWidth="92.0" text="ID" />
+            <TableColumn fx:id="colRef" prefWidth="154.0" text="Reference" />
+            <TableColumn fx:id="colMont" prefWidth="175.0" text="Montant" />
+            <TableColumn fx:id="colDate" prefWidth="187.0" text="Date d'ajout" />
+            <TableColumn fx:id="colType" prefWidth="107.0" text="Type" />
+         </columns>
+      </TableView>
+      <VBox layoutX="315.0" layoutY="527.0" prefHeight="112.0" prefWidth="147.0" spacing="25.0">
+         <children>
+            <Button fx:id="btnAjout" mnemonicParsing="false" onMouseClicked="#handleBtnAdd" prefHeight="25.0" prefWidth="175.0" text="Ajouter ✅ " textFill="#31ab54" />
+            <Button fx:id="btnModif" mnemonicParsing="false" onMouseClicked="#handlebtnModif" prefHeight="25.0" prefWidth="244.0" text="Modifier  " />
+            <Button fx:id="btnSuppr" mnemonicParsing="false" onMouseClicked="#handleButtonSupp" prefHeight="25.0" prefWidth="176.0" text="Supprimer " />
+         </children>
+         <effect>
+            <Blend>
+               <topInput>
+                  <ColorAdjust />
+               </topInput>
+            </Blend>
+         </effect>
+      </VBox>
+      <VBox layoutX="265.0" layoutY="197.0" prefHeight="200.0" prefWidth="100.0" spacing="25.0">
+         <children>
+            <Label text="ID :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="114.0" text="Reference :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="87.0" text="Montant :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="112.0" text="Date d'ajout :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="112.0" text="Type :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="101.0" text="Description :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="381.0" layoutY="194.0" prefHeight="300.0" prefWidth="147.0" spacing="20.0">
+         <children>
+            <TextField fx:id="tfID" />
+            <TextField fx:id="tfRef" />
+            <TextField fx:id="tfMnt" />
+            <DatePicker fx:id="tfDateaj" />
+            <ChoiceBox fx:id="lblchoice" layoutX="749.0" layoutY="602.0" prefHeight="25.0" prefWidth="100.0" />
+            <TextArea fx:id="tfDesc" prefHeight="78.0" prefWidth="147.0" />
+         </children>
+      </VBox>
+      <Button layoutX="1164.0" layoutY="614.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="147.0" text="Retour" />
+      <TextField fx:id="tfSearch" layoutX="581.0" layoutY="136.0" prefHeight="39.0" prefWidth="437.0" promptText="Recherche">
+         <font>
+            <Font name="Vivaldi Italic" size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="507.0" layoutY="47.0" prefHeight="52.0" prefWidth="657.0" text="Gestion des Revenus et des Depences " textFill="#00000091">
+         <font>
+            <Font name="Georgia Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="265.0" layoutY="139.0" prefHeight="32.0" prefWidth="231.0" text="Information :" textFill="#627fa6">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="650.0" layoutY="525.0" prefHeight="32.0" prefWidth="87.0" text="Date 1 :" textFill="#666879">
+         <font>
+            <Font name="Tw Cen MT" size="20.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="tfDatech" layoutX="749.0" layoutY="528.0" promptText="Date " />
+      <Button fx:id="btnCalcule" layoutX="987.0" layoutY="614.0" mnemonicParsing="false" onMouseClicked="#handlebtnPrint" prefHeight="25.0" prefWidth="87.0" text="Print" textFill="#379a85" />
+      <ChoiceBox fx:id="lblchx" layoutX="750.0" layoutY="602.0" prefHeight="25.0" prefWidth="174.0" />
+      <Label layoutX="668.0" layoutY="591.0" prefHeight="32.0" prefWidth="59.0" text="Type :" textFill="#757490">
+         <font>
+            <Font name="Tw Cen MT" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="650.0" layoutY="559.0" prefHeight="32.0" prefWidth="78.0" text="Date 2 :" textFill="#707179">
+         <font>
+            <Font name="Tw Cen MT" size="20.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="tfDatechf" layoutX="749.0" layoutY="562.0" promptText="Date " />
+      <Label layoutX="600.0" layoutY="632.0" prefHeight="17.0" prefWidth="362.0" text="Si type n'est pas choisie on va imprimer les depences et les revenus " textFill="#5b5b5b" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="arch" prefHeight="677.0" prefWidth="1409.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.interventionController">
+   <children>
+      <VBox layoutX="343.0" layoutY="160.0" prefHeight="289.0" prefWidth="158.0" spacing="25.0">
+         <children>
+            <TextField fx:id="tfid" />
+            <DatePicker fx:id="tfdateaj" />
+            <DatePicker fx:id="tfdated" layoutX="10.0" layoutY="35.0" />
+            <DatePicker fx:id="tfdatef" layoutX="10.0" layoutY="35.0" />
+            <TextField fx:id="tfbug" prefHeight="28.0" prefWidth="158.0" />
+            <TextField fx:id="tfadrs" />
+         </children>
+      </VBox>
+      <VBox layoutX="231.0" layoutY="160.0" prefHeight="325.0" prefWidth="100.0" spacing="33.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="139.0" text="ID :" />
+            <Label prefHeight="17.0" prefWidth="174.0" text="Date ajout :" />
+            <Label prefHeight="17.0" prefWidth="165.0" text="Date debut :" />
+            <Label prefHeight="17.0" prefWidth="157.0" text="Date fin :" />
+            <Label prefHeight="17.0" prefWidth="75.0" text="Buget :" />
+            <Label prefHeight="17.0" prefWidth="138.0" text="Adresse :" />
+         </children>
+      </VBox>
+      <VBox layoutX="343.0" layoutY="537.0" prefHeight="126.0" prefWidth="158.0" spacing="25.0" />
+      <TextField fx:id="tfsearch" layoutX="543.0" layoutY="143.0" prefHeight="34.0" prefWidth="671.0" promptText="Rechercher">
+         <font>
+            <Font name="Eras Medium ITC" size="12.0" />
+         </font>
+      </TextField>
+      <TableView fx:id="tvInterv" layoutX="546.0" layoutY="215.0" onMouseClicked="#getSelected" prefHeight="289.0" prefWidth="671.0">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="91.0" text="ID" />
+          <TableColumn fx:id="coldateaj" prefWidth="115.0" text="Date d'ajout" />
+            <TableColumn fx:id="coldated" prefWidth="119.0" text="Date debut " />
+            <TableColumn fx:id="coldatef" prefWidth="124.0" text="Date fin " />
+            <TableColumn fx:id="colbug" minWidth="0.0" prefWidth="97.0" text="Budget" />
+            <TableColumn fx:id="coladrs" minWidth="2.0" prefWidth="124.0" text="Adresse" />
+        </columns>
+      </TableView>
+      <VBox layoutX="319.0" layoutY="485.0" prefHeight="149.0" prefWidth="158.0" spacing="25.0">
+         <children>
+            <Button fx:id="btnajt" mnemonicParsing="false" onMouseClicked="#handleBtnAdd" prefHeight="25.0" prefWidth="160.0" text="Ajouter " />
+            <Button fx:id="btnmodif" mnemonicParsing="false" onMouseClicked="#handlebtnModif" prefHeight="25.0" prefWidth="160.0" text="Modifier" />
+            <Button fx:id="btnsuppr" mnemonicParsing="false" onMouseClicked="#handleButtonSupp" prefHeight="25.0" prefWidth="160.0" text="Supprimer" />
+         </children>
+      </VBox>
+      <Label layoutX="674.0" layoutY="53.0" prefHeight="56.0" prefWidth="349.0" text="Gestion des Interventions">
+         <font>
+            <Font name="Book Antiqua" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnRetour" layoutX="1220.0" layoutY="560.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="100.0" text="Retour" />
+      <Button fx:id="btnplanif" layoutX="783.0" onMouseClicked="#onPlanifClicked" layoutY="537.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="131.0" text="Planifer" />
+   </children>
+</AnchorPane>

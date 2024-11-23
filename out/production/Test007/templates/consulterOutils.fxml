@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="1336.0" style="-fx-background-color: #F5F5F5 ;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.outilsController">
+   <children>
+      <TableView fx:id="tvOutils" layoutX="585.0" layoutY="243.0" onMouseClicked="#getSelected" prefHeight="318.0" prefWidth="724.0">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="92.0" text="ID" />
+          <TableColumn fx:id="colRef" prefWidth="105.0" text="Reference" />
+            <TableColumn fx:id="colQuant" prefWidth="151.0" text="Quantite" />
+            <TableColumn fx:id="colDate" prefWidth="127.0" text="Date d'ajout" />
+            <TableColumn fx:id="colEtat" prefWidth="134.0" text="Etat" />
+            <TableColumn fx:id="coltype" prefWidth="112.0" text="Type" />
+        </columns>
+      </TableView>
+      <VBox layoutX="352.0" layoutY="511.0" prefHeight="128.0" prefWidth="134.0" spacing="25.0">
+         <children>
+            <Button fx:id="btnAjout" mnemonicParsing="false" onMouseClicked="#handleBtnAddoutil" prefHeight="23.0" prefWidth="134.0" text="Ajouter outil" textFill="#31ab54" />
+            <Button fx:id="btnModif" mnemonicParsing="false" onMouseClicked="#handlebtnModif" prefHeight="25.0" prefWidth="140.0" text="Modifier outil" />
+            <Button fx:id="btnSuppr" mnemonicParsing="false" onMouseClicked="#handleButtonSupp" prefHeight="25.0" prefWidth="176.0" text="Supprimer outil" />
+         </children>
+         <effect>
+            <Blend>
+               <topInput>
+                  <ColorAdjust />
+               </topInput>
+            </Blend>
+         </effect>
+      </VBox>
+      <VBox layoutX="265.0" layoutY="197.0" prefHeight="200.0" prefWidth="100.0" spacing="25.0">
+         <children>
+            <Label text="ID :">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label prefHeight="20.0" prefWidth="114.0" text="Reference :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Quantite :">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label prefHeight="17.0" prefWidth="112.0" text="Date d'ajout :">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label prefHeight="17.0" prefWidth="101.0" text="Type :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Etat :">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+         </children>
+      </VBox>
+      <VBox layoutX="381.0" layoutY="194.0" prefHeight="200.0" prefWidth="147.0" spacing="20.0">
+         <children>
+            <TextField fx:id="tfID" />
+            <TextField fx:id="tfRef" />
+            <TextField fx:id="tfQuantite" />
+            <DatePicker fx:id="tfDateaj" />
+            <ChoiceBox fx:id="lbltype" prefWidth="150.0" />
+            <ChoiceBox fx:id="lblChoice" prefHeight="25.0" prefWidth="174.0" />
+         </children>
+      </VBox>
+      <Button layoutX="1164.0" layoutY="614.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="147.0" text="Retour" />
+      <TextField fx:id="tfSearch" layoutX="585.0" layoutY="178.0" prefHeight="39.0" prefWidth="535.0" promptText="Recherche">
+         <font>
+            <Font name="Vivaldi Italic" size="15.0" />
+         </font></TextField>
+      <Label layoutX="585.0" layoutY="46.0" prefHeight="52.0" prefWidth="321.0" text="Gestion des outils " textFill="#00000091">
+         <font>
+            <Font name="Georgia Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="265.0" layoutY="139.0" prefHeight="32.0" prefWidth="231.0" text="Information relative à l'outil :" textFill="#627fa6">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <ImageView blendMode="DARKEN" fitHeight="68.0" fitWidth="89.0" layoutX="1204.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../tool.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="NW_RESIZE" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

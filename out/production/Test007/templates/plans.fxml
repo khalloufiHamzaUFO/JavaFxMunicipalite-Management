@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="707.0" prefWidth="1388.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.planfController">
+   <children>
+      <Label layoutX="438.0" layoutY="26.0" prefHeight="39.0" prefWidth="396.0" text="Plannifcation des interventions ">
+         <font>
+            <Font name="Bernard MT Condensed" size="27.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnR" layoutX="1240.0" layoutY="668.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="119.0" text="Retour" textFill="#3a7bd0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tvOutil" layoutX="307.0" layoutY="464.0" onMouseClicked="#getSelectedOutil" prefHeight="200.0" prefWidth="219.0">
+        <columns>
+          <TableColumn fx:id="colIDoutil" prefWidth="99.0" text="ID outil" />
+          <TableColumn fx:id="colQant" prefWidth="116.0" text="Quantite" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tvVehicule" layoutX="648.0" layoutY="464.0" onMouseClicked="#getSelectedVec" prefHeight="200.0" prefWidth="231.0">
+        <columns>
+          <TableColumn fx:id="colidVehic" prefWidth="101.0" text="ID vehicule " />
+          <TableColumn fx:id="colDispoVehi" prefWidth="119.0" text="Disponibilite" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tvEmploye" layoutX="1006.0" layoutY="464.0" onMouseClicked="#getSelectedEMP" prefHeight="200.0" prefWidth="207.0">
+        <columns>
+          <TableColumn fx:id="colidemp" prefWidth="105.0" text="ID Employe" />
+          <TableColumn fx:id="colRole" prefWidth="100.0" text="Role " />
+        </columns>
+      </TableView>
+      <TextField fx:id="tfidEmploye" layoutX="1049.0" layoutY="414.0" prefHeight="25.0" prefWidth="99.0" promptText="ID Employe" />
+      <VBox layoutX="571.0" layoutY="115.0" prefHeight="157.0" prefWidth="130.0" spacing="25.0">
+         <children>
+            <TextField fx:id="tfidinterv" prefHeight="25.0" prefWidth="119.0" />
+            <DatePicker fx:id="tfdated" />
+            <DatePicker fx:id="tfdatef" layoutX="10.0" layoutY="60.0" />
+         </children>
+      </VBox>
+      <TextField fx:id="tfidoutils" layoutX="305.0" layoutY="427.0" prefHeight="25.0" prefWidth="92.0" promptText="ID outil" />
+      <TextField fx:id="tfidVehc" layoutX="718.0" layoutY="414.0" prefHeight="25.0" prefWidth="92.0" promptText="ID vehicule" />
+      <TextField fx:id="tfQuantite" layoutX="428.0" layoutY="427.0" prefHeight="25.0" prefWidth="92.0" promptText="Quantite" />
+      <VBox alignment="TOP_RIGHT" layoutX="410.0" layoutY="115.0" prefHeight="129.0" prefWidth="143.0" spacing="30.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="99.0" text="ID intervention :" />
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="120.0" text="Date de reservation :" />
+            <Label layoutX="10.0" layoutY="27.0" prefHeight="17.0" prefWidth="183.0" text="Date de fin de reservation :" />
+         </children>
+      </VBox>
+      <Accordion layoutX="140.0" layoutY="115.0" />
+      <TableView fx:id="tvInterv" layoutX="967.0" layoutY="98.0" onMouseClicked="#getSelectedInter" prefHeight="211.0" prefWidth="286.0">
+         <columns>
+            <TableColumn fx:id="colidIntervention" prefWidth="103.0" text="ID intervention " />
+            <TableColumn fx:id="colDated" prefWidth="86.0" text="Date debut " />
+            <TableColumn fx:id="colDatefin" prefWidth="96.0" text="Date fin " />
+         </columns>
+      </TableView>
+      <VBox layoutX="784.0" layoutY="225.0" prefHeight="129.0" prefWidth="130.0" spacing="25.0">
+         <children>
+            <Button fx:id="btnplannifier" mnemonicParsing="false" onMouseClicked="#handlebtnReserver" prefHeight="25.0" prefWidth="135.0" text="Reserver Vehicule" textFill="#516fb8" textOverrun="LEADING_ELLIPSIS">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnplannifierOutil" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#handleReserverOutil" prefHeight="25.0" prefWidth="134.0" text="Reserver Outil" textFill="#0b9999">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnplannifierEmp" mnemonicParsing="false"  onMouseClicked="#handlebtnReserverEmp" prefHeight="25.0" prefWidth="138.0" text="Affecter Employe" textFill="#a947ae">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

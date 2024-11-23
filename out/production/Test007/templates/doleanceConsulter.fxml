@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="1559.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerDol">
+   <children>
+      <TableView fx:id="tvDol" layoutX="526.0" layoutY="173.0" onDragDetected="#getSelected" onDragEntered="#getSelected" onMouseClicked="#getSelected" prefHeight="278.0" prefWidth="785.0">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="61.0" text="ID " />
+          <TableColumn fx:id="colCin" minWidth="1.0" prefWidth="135.0" text="Cin " />
+            <TableColumn fx:id="colnomprenom" prefWidth="158.0" text="Nom et prenom " />
+            <TableColumn fx:id="coldateaj" prefWidth="141.0" text="Date d'ajout" />
+            <TableColumn fx:id="colTel" prefWidth="109.0" text="Tel" />
+            <TableColumn fx:id="colMail" minWidth="7.0" prefWidth="180.0" text="\@Mail" />
+        </columns>
+      </TableView>
+      <VBox layoutX="213.0" layoutY="173.0" prefHeight="200.0" prefWidth="100.0" spacing="45.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="67.0" text="ID :" />
+            <Label prefHeight="17.0" prefWidth="37.0" text="Cin :" />
+            <Label text="Nom et prenom :" />
+            <Label text="Date d'ajout :" />
+            <Label layoutX="10.0" layoutY="124.0" prefHeight="17.0" prefWidth="97.0" text="Telephone :" />
+            <Label layoutX="10.0" layoutY="181.0" text="\@Mail : " />
+         </children>
+      </VBox>
+      <VBox layoutX="326.0" layoutY="174.0" prefHeight="317.0" prefWidth="170.0" spacing="35.0">
+         <children>
+            <TextField fx:id="tfid" />
+            <TextField fx:id="tfcin" />
+            <TextField fx:id="tfnom" />
+            <DatePicker fx:id="tfdate" />
+            <TextField fx:id="tftel" />
+            <TextField fx:id="tfMail" />
+         </children>
+      </VBox>
+      <TextArea fx:id="tfdesc" layoutX="326.0" layoutY="542.0" prefHeight="122.0" prefWidth="170.0" promptText="Description 50 C">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextArea>
+      <Label layoutX="213.0" layoutY="105.0" prefHeight="42.0" prefWidth="256.0" text="Information relative au doleance :" textFill="#7d90dd">
+         <font>
+            <Font name="Nirmala UI Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="213.0" layoutY="542.0" prefHeight="25.0" prefWidth="79.0" text="Description :">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="530.0" layoutY="54.0" prefHeight="60.0" prefWidth="455.0" text="Gestion des doleances " textFill="#316c78">
+         <font>
+            <Font name="Sitka Subheading Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnModif" layoutX="764.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#handlebtnModif" prefHeight="32.0" prefWidth="110.0" text="Modifier dol">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnAjout" layoutX="626.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#handlebtnAdd" prefHeight="32.0" prefWidth="110.0" text="Ajouter dol" textFill="#2e8338">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnSuprr" layoutX="897.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#handleButtonSupp" prefHeight="32.0" prefWidth="110.0" text="Supprimer dol" textFill="#ee0000">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="1438.0" layoutY="563.0" mnemonicParsing="false" text="Retour" />
+      <TextField fx:id="tfSearch" layoutX="530.0" layoutY="119.0" prefHeight="32.0" prefWidth="407.0" promptText="Recherche">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+     </children>
+</AnchorPane>
